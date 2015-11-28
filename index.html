@@ -1,0 +1,427 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Guggenheim | SiteMarina</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
+
+<style>
+
+html, body{
+  background-color: #F8F3ED;
+  font-family: sans-serif;
+  color: #575E70;
+  text-align: center;
+  line-height: 1.5;
+}
+
+body{
+  max-width: 800px;
+  margin: 0 auto;
+  padding: .5em;
+  padding-bottom: 4em;
+}
+
+h1 {
+  font-weight: 400;
+}
+
+h2 {
+  font-weight: 200;
+  color: #AB9781;
+  -webkit-font-smoothing: antialiased;
+  margin-bottom: 0;
+  line-height: 1;
+  padding-top: .3em;
+}
+
+button {
+  cursor: pointer;
+}
+
+.logo {
+  position: relative;
+  display: inline-block;
+  margin: 2em 0 1em 0;
+  width: 75%;
+  max-width: 18em;
+}
+
+.logo img,
+.logo svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+form {
+  height: 0;
+}
+
+.heart {
+  font-size: 1.5em;
+}
+
+.features small {
+  font-size: 75%;
+}
+
+.tiny {
+  font-size: 65%;
+}
+
+a, a:visited, a:active {
+    color: #4D8FFB;
+    text-decoration: none;
+}
+
+
+
+
+
+.guggenheim {
+    max-width: 100%;
+    box-sizing: content-box;
+}
+.guggenheim__ratio-container {
+    position: relative;
+}
+.guggenheim__figure,
+.guggenheim__link,
+.guggenheim__image {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    vertical-align: middle;
+}
+.guggenheim__figure {
+position: relative;
+}
+.guggenheim__link,
+.guggenheim__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.guggenheim__link {
+    width:100%;
+}
+.guggenheim__image {
+    height: auto;
+    width: 100%;
+}
+
+@media only screen and (max-width:40em){
+    .guggenheim__figure {
+        width: 100% !important;
+        margin: 0 !important;
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+    }
+    .guggenheim__row {
+        padding: 0 !important;
+    }
+}
+
+.zoom a, [data-lightbox], [data-lightbox] a {
+    -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
+    cursor: -webkit-zoom-in;
+}
+
+
+/* Photoswipe styles */
+/*! PhotoSwipe Default UI CSS by Dmitry Semenov | photoswipe.com | MIT license */.pswp__button{width:44px;height:44px;position:relative;background:none;cursor:pointer;overflow:visible;-webkit-appearance:none;display:block;border:0;padding:0;margin:0;float:right;opacity:0.75;-webkit-transition:opacity 0.2s;transition:opacity 0.2s;box-shadow:none}.pswp__button:focus,.pswp__button:hover{opacity:1}.pswp__button:active{outline:none;opacity:0.9}.pswp__button::-moz-focus-inner{padding:0;border:0}.pswp__ui--over-close .pswp__button--close{opacity:1}.pswp__button,.pswp__button--arrow--left:before,.pswp__button--arrow--right:before{background:url(img/default-skin.png) 0 0 no-repeat;background-size:264px 88px;width:44px;height:44px}@media (-webkit-min-device-pixel-ratio: 1.1), (-webkit-min-device-pixel-ratio: 1.09375), (min-resolution: 105dpi), (min-resolution: 1.1dppx){.pswp--svg .pswp__button,.pswp--svg .pswp__button--arrow--left:before,.pswp--svg .pswp__button--arrow--right:before{background-image:url(img/default-skin.svg)}.pswp--svg .pswp__button--arrow--left,.pswp--svg .pswp__button--arrow--right{background:none}}.pswp__button--close{background-position:0 -44px}.pswp__button--share{background-position:-44px -44px}.pswp__button--fs{display:none}.pswp--supports-fs .pswp__button--fs{display:block}.pswp--fs .pswp__button--fs{background-position:-44px 0}.pswp__button--zoom{display:none;background-position:-88px 0}.pswp--zoom-allowed .pswp__button--zoom{display:block}.pswp--zoomed-in .pswp__button--zoom{background-position:-132px 0}.pswp--touch .pswp__button--arrow--left,.pswp--touch .pswp__button--arrow--right{visibility:hidden}.pswp__button--arrow--left,.pswp__button--arrow--right{background:none;top:50%;margin-top:-50px;width:70px;height:100px;position:absolute}.pswp__button--arrow--left{left:0}.pswp__button--arrow--right{right:0}.pswp__button--arrow--left:before,.pswp__button--arrow--right:before{content:'';top:35px;background-color:rgba(0,0,0,0.3);height:30px;width:32px;position:absolute}.pswp__button--arrow--left:before{left:6px;background-position:-138px -44px}.pswp__button--arrow--right:before{right:6px;background-position:-94px -44px}.pswp__counter,.pswp__share-modal{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.pswp__share-modal{display:block;background:rgba(0,0,0,0.5);width:100%;height:100%;top:0;left:0;padding:10px;position:absolute;z-index:1600;opacity:0;-webkit-transition:opacity 0.25s ease-out;transition:opacity 0.25s ease-out;-webkit-backface-visibility:hidden;will-change:opacity}.pswp__share-modal--hidden{display:none}.pswp__share-tooltip{z-index:1620;position:absolute;background:#FFF;top:56px;border-radius:2px;display:block;width:auto;right:44px;box-shadow:0 2px 5px rgba(0,0,0,0.25);-webkit-transform:translateY(6px);-ms-transform:translateY(6px);transform:translateY(6px);-webkit-transition:-webkit-transform 0.25s;transition:transform 0.25s;-webkit-backface-visibility:hidden;will-change:transform}.pswp__share-tooltip a{display:block;padding:8px 12px;color:#000;text-decoration:none;font-size:14px;line-height:18px}.pswp__share-tooltip a:hover{text-decoration:none;color:#000}.pswp__share-tooltip a:first-child{border-radius:2px 2px 0 0}.pswp__share-tooltip a:last-child{border-radius:0 0 2px 2px}.pswp__share-modal--fade-in{opacity:1}.pswp__share-modal--fade-in .pswp__share-tooltip{-webkit-transform:translateY(0);-ms-transform:translateY(0);transform:translateY(0)}.pswp--touch .pswp__share-tooltip a{padding:16px 12px}a.pswp__share--facebook:before{content:'';display:block;width:0;height:0;position:absolute;top:-12px;right:15px;border:6px solid transparent;border-bottom-color:#FFF;-webkit-pointer-events:none;-moz-pointer-events:none;pointer-events:none}a.pswp__share--facebook:hover{background:#3E5C9A;color:#FFF}a.pswp__share--facebook:hover:before{border-bottom-color:#3E5C9A}a.pswp__share--twitter:hover{background:#55ACEE;color:#FFF}a.pswp__share--pinterest:hover{background:#CCC;color:#CE272D}a.pswp__share--download:hover{background:#DDD}.pswp__counter{position:absolute;left:0;top:0;height:44px;font-size:13px;line-height:44px;color:#FFF;opacity:0.75;padding:0 10px}.pswp__caption{position:absolute;left:0;bottom:0;width:100%;min-height:44px}.pswp__caption small{font-size:11px;color:#BBB}.pswp__caption__center{text-align:left;max-width:420px;margin:0 auto;font-size:13px;padding:10px;line-height:20px;color:#CCC}.pswp__caption--empty{display:none}.pswp__caption--fake{visibility:hidden}.pswp__preloader{width:44px;height:44px;position:absolute;top:0;left:50%;margin-left:-22px;opacity:0;-webkit-transition:opacity 0.25s ease-out;transition:opacity 0.25s ease-out;will-change:opacity;direction:ltr}.pswp__preloader__icn{width:20px;height:20px;margin:12px}.pswp__preloader--active{opacity:1}.pswp__preloader--active .pswp__preloader__icn{background:url(img/preloader.gif) 0 0 no-repeat}.pswp--css_animation .pswp__preloader--active{opacity:1}.pswp--css_animation .pswp__preloader--active .pswp__preloader__icn{-webkit-animation:clockwise 500ms linear infinite;animation:clockwise 500ms linear infinite}.pswp--css_animation .pswp__preloader--active .pswp__preloader__donut{-webkit-animation:donut-rotate 1000ms cubic-bezier(0.4, 0, 0.22, 1) infinite;animation:donut-rotate 1000ms cubic-bezier(0.4, 0, 0.22, 1) infinite}.pswp--css_animation .pswp__preloader__icn{background:none;opacity:0.75;width:14px;height:14px;position:absolute;left:15px;top:15px;margin:0}.pswp--css_animation .pswp__preloader__cut{position:relative;width:7px;height:14px;overflow:hidden}.pswp--css_animation .pswp__preloader__donut{box-sizing:border-box;width:14px;height:14px;border:2px solid #FFF;border-radius:50%;border-left-color:transparent;border-bottom-color:transparent;position:absolute;top:0;left:0;background:none;margin:0}@media screen and (max-width: 1024px){.pswp__preloader{position:relative;left:auto;top:auto;margin:0;float:right}}@-webkit-keyframes clockwise{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@keyframes clockwise{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@-webkit-keyframes donut-rotate{0%{-webkit-transform:rotate(0);transform:rotate(0)}50%{-webkit-transform:rotate(-140deg);transform:rotate(-140deg)}100%{-webkit-transform:rotate(0);transform:rotate(0)}}@keyframes donut-rotate{0%{-webkit-transform:rotate(0);transform:rotate(0)}50%{-webkit-transform:rotate(-140deg);transform:rotate(-140deg)}100%{-webkit-transform:rotate(0);transform:rotate(0)}}.pswp__ui{-webkit-font-smoothing:auto;visibility:visible;opacity:1;z-index:1550}.pswp__top-bar{position:absolute;left:0;top:0;height:44px;width:100%}.pswp__caption,.pswp__top-bar,.pswp--has_mouse .pswp__button--arrow--left,.pswp--has_mouse .pswp__button--arrow--right{-webkit-backface-visibility:hidden;will-change:opacity;-webkit-transition:opacity 333ms cubic-bezier(0.4, 0, 0.22, 1);transition:opacity 333ms cubic-bezier(0.4, 0, 0.22, 1)}.pswp--has_mouse .pswp__button--arrow--left,.pswp--has_mouse .pswp__button--arrow--right{visibility:visible}.pswp__top-bar,.pswp__caption{background-color:rgba(0,0,0,0.5)}.pswp__ui--fit .pswp__top-bar,.pswp__ui--fit .pswp__caption{background-color:rgba(0,0,0,0.3)}.pswp__ui--idle .pswp__top-bar{opacity:0}.pswp__ui--idle .pswp__button--arrow--left,.pswp__ui--idle .pswp__button--arrow--right{opacity:0}.pswp__ui--hidden .pswp__top-bar,.pswp__ui--hidden .pswp__caption,.pswp__ui--hidden .pswp__button--arrow--left,.pswp__ui--hidden .pswp__button--arrow--right{opacity:0.001}.pswp__ui--one-slide .pswp__button--arrow--left,.pswp__ui--one-slide .pswp__button--arrow--right,.pswp__ui--one-slide .pswp__counter{display:none}.pswp__element--disabled{display:none !important}.pswp--minimal--dark .pswp__top-bar{background:none}
+/*! PhotoSwipe main CSS by Dmitry Semenov | photoswipe.com | MIT license */
+/*
+    Styles for basic PhotoSwipe functionality (sliding area, open/close transitions)
+*/
+/* pswp = photoswipe */
+.pswp {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  -ms-touch-action: none;
+  touch-action: none;
+  z-index: 1500;
+  -webkit-text-size-adjust: 100%;
+  /* create separate layer, to avoid paint on window.onscroll in webkit/blink */
+  -webkit-backface-visibility: hidden;
+  outline: none; }
+  .pswp * {
+    box-sizing: border-box; }
+  .pswp img {
+    max-width: none; }
+
+/* style is added when JS option showHideOpacity is set to true */
+.pswp--animate_opacity {
+  /* 0.001, because opacity:0 doesn't trigger Paint action, which causes lag at start of transition */
+  opacity: 0.001;
+  will-change: opacity;
+  /* for open/close transition */
+  transition: opacity 333ms cubic-bezier(0.4, 0, 0.22, 1); }
+
+.pswp--open {
+  display: block; }
+
+.pswp--zoom-allowed .pswp__img {
+  /* autoprefixer: off */
+  cursor: -webkit-zoom-in;
+  cursor: -moz-zoom-in;
+  cursor: zoom-in; }
+
+.pswp--zoomed-in .pswp__img {
+  /* autoprefixer: off */
+  cursor: -webkit-grab;
+  cursor: -moz-grab;
+  cursor: grab; }
+
+.pswp--dragging .pswp__img {
+  /* autoprefixer: off */
+  cursor: -webkit-grabbing;
+  cursor: -moz-grabbing;
+  cursor: grabbing; }
+
+/*
+    Background is added as a separate element.
+    As animating opacity is much faster than animating rgba() background-color.
+*/
+.pswp__bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0;
+  -webkit-backface-visibility: hidden;
+  will-change: opacity; }
+
+.pswp__scroll-wrap {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; }
+
+.pswp__container,
+.pswp__zoom-wrap {
+  -ms-touch-action: none;
+  touch-action: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0; }
+
+/* Prevent selection and tap highlights */
+.pswp__container,
+.pswp__img {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none; }
+
+.pswp__zoom-wrap {
+  position: absolute;
+  width: 100%;
+  -webkit-transform-origin: left top;
+  -moz-transform-origin: left top;
+  -ms-transform-origin: left top;
+  transform-origin: left top;
+  /* for open/close transition */
+  transition: transform 333ms cubic-bezier(0.4, 0, 0.22, 1); }
+
+.pswp__bg {
+  will-change: opacity;
+  /* for open/close transition */
+  transition: opacity 333ms cubic-bezier(0.4, 0, 0.22, 1); }
+
+.pswp--animated-in .pswp__bg,
+.pswp--animated-in .pswp__zoom-wrap {
+  -webkit-transition: none;
+  transition: none; }
+
+.pswp__container,
+.pswp__zoom-wrap {
+  -webkit-backface-visibility: hidden; }
+
+.pswp__item {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow: hidden; }
+
+.pswp__img {
+  position: absolute;
+  width: auto;
+  height: auto;
+  top: 0;
+  left: 0; }
+
+/*
+    stretched thumbnail or div placeholder element (see below)
+    style is added to avoid flickering in webkit/blink when layers overlap
+*/
+.pswp__img--placeholder {
+  -webkit-backface-visibility: hidden; }
+
+/*
+    div element that matches size of large image
+    large image loads on top of it
+*/
+.pswp__img--placeholder--blank {
+  background: #222; }
+
+.pswp--ie .pswp__img {
+  width: 100% !important;
+  height: auto !important;
+  left: 0;
+  top: 0; }
+
+/*
+    Error message appears when image is not loaded
+    (JS option errorMsg controls markup)
+*/
+.pswp__error-msg {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  line-height: 16px;
+  margin-top: -8px;
+  color: #CCC; }
+
+.pswp__error-msg a {
+  color: #CCC;
+  text-decoration: underline; }
+
+</style>
+
+</head>
+<body>
+    <script src="js/site.js" async defer></script>
+
+    <a class="logo" href="https://sitemarina.com">
+        <div style="padding-bottom:23.5%"></div>
+        <svg width="410" height="98" viewBox="0 0 410 98" xmlns="http://www.w3.org/2000/svg"><path d="M184.845 98c-12.382 0-20.734-5.68-21.18-5.5.446-.18-6.98 5.38-18.156 5.5-13.2-.12-20.51-5.553-20.18-5.5-.34-.053-9.48 5.5-20.17 5.5C94.12 98 86 92.808 86 92.5v-6.4c0-.49 7.777 5.072 19.164 5.5 11.49-.428 19.837-6.6 20.172-6.6-.335 0 9.388 6.41 20.173 6.6 8.43-.19 18.83-6.6 19.16-6.6-.33 0 7.67 6.172 20.17 6.6 7.86-.34 14.67-3.83 17.15-5.078V86.1c0-.075.18-.008.53.16.3-.15.47-.212.47-.16v.393c2.44 1.236 9.18 4.77 18.16 5.107 11.49-.428 19.84-6.6 20.17-6.6-.34 0 9.39 6.41 20.17 6.6 8.43-.19 18.83-6.6 19.16-6.6-.33 0 7.67 6.172 20.17 6.6 9.92-.428 18.15-5.87 18.15-5.5v6.4c0 .31-7.65 5.5-18.16 5.5-12.38 0-20.734-5.68-21.18-5.5.446-.18-6.98 5.38-18.156 5.5-13.193-.12-20.51-5.553-20.173-5.5-.333-.053-9.48 5.5-20.17 5.5-9.41 0-16.7-3.77-18.65-5.076C200.68 94.23 193.8 98 184.848 98zM.825 57.008V38.576h4.463c2.784 5.28 5.376 8.952 7.776 11.016 2.4 2.064 5.4 3.096 9 3.096 3.072 0 5.496-.768 7.272-2.304C31.112 48.848 32 46.688 32 43.904c0-1.248-.276-2.376-.828-3.384-.552-1.008-1.164-1.824-1.836-2.448-.672-.624-1.728-1.248-3.168-1.872-1.44-.624-2.64-1.08-3.6-1.368-.96-.288-2.4-.696-4.32-1.224-2.064-.576-3.708-1.08-4.932-1.512-1.224-.432-2.688-1.08-4.392-1.944C7.22 29.288 5.912 28.364 5 27.38c-.912-.984-1.716-2.268-2.412-3.852s-1.044-3.384-1.044-5.4c0-4.032 1.512-7.524 4.536-10.476C9.104 4.7 12.968 3.224 17.672 3.224c2.352 0 4.716.492 7.092 1.476 2.376.984 4.284 2.34 5.724 4.068l1.656-5.328h4.824v17.712h-4.464c-2.16-4.848-4.464-8.28-6.912-10.296-2.448-2.016-5.232-3.024-8.352-3.024-2.544 0-4.584.732-6.12 2.196-1.536 1.464-2.304 3.42-2.304 5.868 0 1.296.288 2.472.864 3.528.576 1.056 1.128 1.884 1.656 2.484.528.6 1.596 1.236 3.204 1.908 1.608.672 2.724 1.104 3.348 1.296.624.192 2.016.576 4.176 1.152.336.096.576.168.72.216 2.064.528 3.708.972 4.932 1.332 1.224.36 2.664.936 4.32 1.728 1.656.792 2.94 1.668 3.852 2.628.912.96 1.704 2.208 2.376 3.744.672 1.536 1.008 3.312 1.008 5.328 0 4.512-1.62 8.304-4.86 11.376-3.24 3.072-7.332 4.608-12.276 4.608-6.288 0-11.16-1.944-14.616-5.832l-1.872 5.616H.824zM56.695 11c-1.536 0-2.77-.456-3.708-1.368-.936-.912-1.404-2.16-1.404-3.744 0-1.536.48-2.796 1.44-3.78S55.208.632 56.696.632s2.7.468 3.636 1.404c.936.936 1.404 2.172 1.404 3.708 0 1.584-.468 2.856-1.404 3.816-.936.96-2.148 1.44-3.636 1.44zM46.76 56v-5.04h6.768v-27H46.76v-5.04H60.8v32.04h6.768V56H46.76zM78.08 9.848l7.272-.792V19.28h12.096v4.68H85.352v22.32c0 1.872.336 3.252 1.008 4.14.672.888 1.824 1.332 3.456 1.332 2.304 0 4.248-2.136 5.832-6.408l3.456 1.368c-1.92 6.672-5.712 10.008-11.376 10.008-3.12 0-5.508-.876-7.164-2.628-1.656-1.752-2.484-4.188-2.484-7.308V23.96h-7.344v-4.68h7.344V9.848zm59.256 28.08H111.56c.096 4.608 1.14 8.088 3.132 10.44 1.992 2.352 4.788 3.528 8.388 3.528 4.752 0 8.184-2.352 10.296-7.056h3.744c-1.056 3.888-2.952 6.84-5.688 8.856-2.736 2.016-6.144 3.024-10.224 3.024-5.472 0-9.768-1.752-12.888-5.256-3.12-3.504-4.68-8.04-4.68-13.608 0-5.568 1.716-10.224 5.148-13.968 3.432-3.744 7.716-5.616 12.852-5.616 3.504 0 6.492.972 8.964 2.916 2.472 1.944 4.236 4.368 5.292 7.272s1.536 6.06 1.44 9.468zm-16.2-15.552c-5.664 0-8.832 3.936-9.504 11.808h18.216c-.576-7.872-3.48-11.808-8.712-11.808zM144.176 56v-4.896h7.992V9.344h-7.992V4.448h20.808l13.464 38.664h.216l13.752-38.664h20.376v4.896h-8.352v41.76h8.352V56h-23.04v-4.896h6.912V9.92h-.648L179.096 56h-3.744L158.288 9.92h-.648v41.184h7.416V56h-20.88zm86.832.432c-3.36 0-5.988-.876-7.884-2.628-1.896-1.752-2.844-4.068-2.844-6.948 0-2.64.912-4.872 2.736-6.696 1.392-1.392 3.108-2.436 5.148-3.132 2.04-.696 4.932-1.308 8.676-1.836 3.264-.528 5.064-.96 5.4-1.296.24-.192.36-.528.36-1.008v-3.816c0-2.448-.6-4.188-1.8-5.22-1.2-1.032-3.096-1.548-5.688-1.548-2.448 0-4.608.576-6.48 1.728 1.536.72 2.304 2.016 2.304 3.888 0 1.248-.408 2.304-1.224 3.168-.816.864-1.92 1.296-3.312 1.296-1.44 0-2.592-.456-3.456-1.368-.864-.912-1.296-1.992-1.296-3.24 0-2.784 1.452-5.052 4.356-6.804 2.904-1.752 6.444-2.628 10.62-2.628 8.784 0 13.176 3.744 13.176 11.232v18.936c0 1.056.192 1.8.576 2.232.384.432 1.032.648 1.944.648 1.104 0 2.112-1.008 3.024-3.024l2.736 1.584c-1.824 4.224-4.536 6.336-8.136 6.336-1.824 0-3.36-.552-4.608-1.656-1.248-1.104-1.896-2.736-1.944-4.896h-.36c-1.056 2.016-2.712 3.636-4.968 4.86-2.256 1.224-4.608 1.836-7.056 1.836zm3.312-4.896c2.016 0 3.9-.756 5.652-2.268 1.752-1.512 2.628-3.3 2.628-5.364V37.28c-.288.144-1.536.408-3.744.792-4.176.624-6.996 1.416-8.46 2.376-1.464.96-2.196 2.616-2.196 4.968 0 4.08 2.04 6.12 6.12 6.12zM260.528 56v-5.04h5.976v-27h-5.976v-5.04h13.104v8.64c.96-2.976 2.46-5.244 4.5-6.804 2.04-1.56 4.212-2.34 6.516-2.34 1.968 0 3.504.588 4.608 1.764 1.104 1.176 1.656 2.652 1.656 4.428 0 1.392-.456 2.592-1.368 3.6-.912 1.008-2.016 1.512-3.312 1.512-1.392 0-2.556-.42-3.492-1.26-.936-.84-1.404-1.98-1.404-3.42 0-.432.072-.912.216-1.44-1.776-.096-3.348.708-4.716 2.412-1.368 1.704-2.388 3.828-3.06 6.372V50.96h7.128V56h-20.376zm45.504-45c-1.536 0-2.772-.456-3.708-1.368-.936-.912-1.404-2.16-1.404-3.744 0-1.536.48-2.796 1.44-3.78s2.184-1.476 3.672-1.476 2.7.468 3.636 1.404c.936.936 1.404 2.172 1.404 3.708 0 1.584-.468 2.856-1.404 3.816-.936.96-2.148 1.44-3.636 1.44zm-9.936 45v-5.04h6.768v-27h-6.768v-5.04h14.04v32.04h6.768V56h-20.808zm26.28 0v-5.04h5.976v-27h-5.976v-5.04h13.104v9.432c3.936-6.624 8.592-9.936 13.968-9.936 3.024 0 5.424 1.02 7.2 3.06 1.776 2.04 2.664 4.884 2.664 8.532V50.96h5.976V56H346.64v-5.04h5.472V32.816c0-3.168-.672-5.448-2.016-6.84-1.2-1.104-2.712-1.656-4.536-1.656-2.544 0-4.836 1.152-6.876 3.456-2.04 2.304-3.06 5.136-3.06 8.496V50.96h5.472V56h-18.72zm59.832.432c-3.36 0-5.988-.876-7.884-2.628-1.896-1.752-2.844-4.068-2.844-6.948 0-2.64.912-4.872 2.736-6.696 1.392-1.392 3.108-2.436 5.148-3.132 2.04-.696 4.932-1.308 8.676-1.836 3.264-.528 5.064-.96 5.4-1.296.24-.192.36-.528.36-1.008v-3.816c0-2.448-.6-4.188-1.8-5.22-1.2-1.032-3.096-1.548-5.688-1.548-2.448 0-4.608.576-6.48 1.728 1.536.72 2.304 2.016 2.304 3.888 0 1.248-.408 2.304-1.224 3.168-.816.864-1.92 1.296-3.312 1.296-1.44 0-2.592-.456-3.456-1.368-.864-.912-1.296-1.992-1.296-3.24 0-2.784 1.452-5.052 4.356-6.804 2.904-1.752 6.444-2.628 10.62-2.628 8.784 0 13.176 3.744 13.176 11.232v18.936c0 1.056.192 1.8.576 2.232.384.432 1.032.648 1.944.648 1.104 0 2.112-1.008 3.024-3.024l2.736 1.584c-1.824 4.224-4.536 6.336-8.136 6.336-1.824 0-3.36-.552-4.608-1.656-1.248-1.104-1.896-2.736-1.944-4.896h-.36c-1.056 2.016-2.712 3.636-4.968 4.86-2.256 1.224-4.608 1.836-7.056 1.836zm3.312-4.896c2.016 0 3.9-.756 5.652-2.268 1.752-1.512 2.628-3.3 2.628-5.364V37.28c-.288.144-1.536.408-3.744.792-4.176.624-6.996 1.416-8.46 2.376-1.464.96-2.196 2.616-2.196 4.968 0 4.08 2.04 6.12 6.12 6.12z" fill="#575E70" fill-rule="evenodd"/></svg>
+    </a>
+
+    <h1>Guggenheim - An algorithm for a perfectly balanced Gallery for Kirby CMS</h1>
+
+    <p>
+        <a href="https://github.com/SiteMarina/guggenheim">https://sitemarina.github.io/guggenheim/</a> made by <a href="https://twitter.com/JimmyRittenborg">@JimmyRittenborg</a>
+    </p>
+
+    <h2>$25<br><small class="tiny">Moral License / Donation</small></h2>
+
+    <br>
+    <form action="https://sitemarina.com/billing/guggenheim-charge.php" method="post">
+        <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+            data-key="pk_live_dprddk7mkcZbUAfis6K4iZEj"
+            data-image="https://s3.amazonaws.com/stripe-uploads/acct_14aZmsDqk4NUSXejmerchant-icon-1446976690484-sitemarina.jpg"
+            data-name="Guggenheim Gallery"
+            data-description="Moral License / Donation"
+            data-billing-address="false"
+            data-currency="USD"
+            data-amount="2500"
+            data-allow-remember-me="false"
+            async defer></script>
+    </form>
+
+    <br> <br> <br>
+
+<div itemtype="http://schema.org/ImageGallery" class="guggenheim gallery zoom margin-center" style="max-width:800px">
+<div class="guggenheim__row" style="padding-left:12px"><figure itemprop="associatedMedia" itemtype="http://schema.org/ImageObject" class="guggenheim__figure" style="width:52.48625%;margin-left:-12px;padding:2px"><div class="guggenheim__ratio-container"><div style="padding-bottom:66.824644549763%"></div><a itemprop="contentUrl" href="img/guggenheim_3230069707_o-c99b42b460c31ade3917c7d6bc6aef95.jpg" data-size="1148x768" data-share-src="http://yachtsails-demo.dev/content/2-nyheder/20150425-test-nyhed/guggenheim_3230069707_o.jpg" title="guggenheim_3230069707_o" class="guggenheim__link"><img itemprop="thumbnail" alt="guggenheim_3230069707_o" src="img/guggenheim_3230069707_o-9f12ef48dcfa6f38ce38ba3913889808.jpg" width="422" height="282" srcset="img/guggenheim_3230069707_o-9f12ef48dcfa6f38ce38ba3913889808.jpg 422w,img/guggenheim_3230069707_o-528e9a7b1e7db9e2d2d69aa1e9ab205a.jpg 844w" sizes="(min-width:64.063em) 422px,(min-width:40.063em) calc(0.5248625 * (100vw - 6em)),calc(100vw - 2.5em)" class="guggenheim__image"></a></div></figure><figure itemprop="associatedMedia" itemtype="http://schema.org/ImageObject" class="guggenheim__figure" style="width:23.506875%;padding:2px"><div class="guggenheim__ratio-container"><div style="padding-bottom:149.20634920635%"></div><a itemprop="contentUrl" href="img/guggenheim_3230070307_o-221fba205354b833377d0d6b5669ea06.jpg" data-size="514x768" data-share-src="http://yachtsails-demo.dev/content/2-nyheder/20150425-test-nyhed/guggenheim_3230070307_o.jpg" title="guggenheim_3230070307_o" class="guggenheim__link"><img itemprop="thumbnail" alt="guggenheim_3230070307_o" src="img/guggenheim_3230070307_o-6747c2ef026f943a9e46d7c339b89143.jpg" width="189" height="282" srcset="img/guggenheim_3230070307_o-6747c2ef026f943a9e46d7c339b89143.jpg 189w,img/guggenheim_3230070307_o-5d4b295958a38aa23431d7f4fda87029.jpg 378w" sizes="(min-width:64.063em) 189px,(min-width:40.063em) calc(0.23506875 * (100vw - 6em)),calc(100vw - 2.5em)" class="guggenheim__image"></a></div></figure><figure itemprop="associatedMedia" itemtype="http://schema.org/ImageObject" class="guggenheim__figure" style="width:23.506875%;padding:2px"><div class="guggenheim__ratio-container"><div style="padding-bottom:149.20634920635%"></div><a itemprop="contentUrl" href="img/guggenheim_3230070903_o-bbd1c359c6ee59c353d62919a4b842dd.jpg" data-size="514x768" data-share-src="http://yachtsails-demo.dev/content/2-nyheder/20150425-test-nyhed/guggenheim_3230070903_o.jpg" title="guggenheim_3230070903_o" class="guggenheim__link"><img itemprop="thumbnail" alt="guggenheim_3230070903_o" src="img/guggenheim_3230070903_o-1735694ceda90d2e826762b1d2361de5.jpg" width="189" height="282" srcset="img/guggenheim_3230070903_o-1735694ceda90d2e826762b1d2361de5.jpg 189w,img/guggenheim_3230070903_o-2d5292dc33a2558046f91a0f45bab993.jpg 378w" sizes="(min-width:64.063em) 189px,(min-width:40.063em) calc(0.23506875 * (100vw - 6em)),calc(100vw - 2.5em)" class="guggenheim__image"></a></div></figure></div>
+<div class="guggenheim__row" style="padding-left:16px"><figure itemprop="associatedMedia" itemtype="http://schema.org/ImageObject" class="guggenheim__figure" style="width:34.3275%;margin-left:-16px;padding:2px"><div class="guggenheim__ratio-container"><div style="padding-bottom:67.028985507246%"></div><a itemprop="contentUrl" href="img/guggenheim_3230074115_o-2ee76018a4b9963fd71c045e3e8e864f.jpg" data-size="1200x803" data-share-src="http://yachtsails-demo.dev/content/2-nyheder/20150425-test-nyhed/guggenheim_3230074115_o.jpg" title="guggenheim_3230074115_o" class="guggenheim__link"><img itemprop="thumbnail" alt="guggenheim_3230074115_o" src="img/guggenheim_3230074115_o-837abb484439003a4a5034bbc1a9b21e.jpg" width="276" height="185" srcset="img/guggenheim_3230074115_o-837abb484439003a4a5034bbc1a9b21e.jpg 276w,img/guggenheim_3230074115_o-d8af9f93c2ba9f37b7e96a5aae19a121.jpg 552w" sizes="(min-width:64.063em) 276px,(min-width:40.063em) calc(0.343275 * (100vw - 6em)),calc(100vw - 2.5em)" class="guggenheim__image"></a></div></figure><figure itemprop="associatedMedia" itemtype="http://schema.org/ImageObject" class="guggenheim__figure" style="width:15.4225%;padding:2px"><div class="guggenheim__ratio-container"><div style="padding-bottom:149.1935483871%"></div><a itemprop="contentUrl" href="img/guggenheim_3230919722_o-3ebe9361d69c8ed1451df164b3af9ad5.jpg" data-size="514x768" data-share-src="http://yachtsails-demo.dev/content/2-nyheder/20150425-test-nyhed/guggenheim_3230919722_o.jpg" title="guggenheim_3230919722_o" class="guggenheim__link"><img itemprop="thumbnail" alt="guggenheim_3230919722_o" src="img/guggenheim_3230919722_o-e6bec06ccbc3a4961449d828c65066b0.jpg" width="124" height="185" srcset="img/guggenheim_3230919722_o-e6bec06ccbc3a4961449d828c65066b0.jpg 124w,img/guggenheim_3230919722_o-fc7a3879fa66220c7ce51207bd00ebbf.jpg 248w" sizes="(min-width:64.063em) 124px,(min-width:40.063em) calc(0.154225 * (100vw - 6em)),calc(100vw - 2.5em)" class="guggenheim__image"></a></div></figure><figure itemprop="associatedMedia" itemtype="http://schema.org/ImageObject" class="guggenheim__figure" style="width:15.4225%;padding:2px"><div class="guggenheim__ratio-container"><div style="padding-bottom:149.1935483871%"></div><a itemprop="contentUrl" href="img/guggenheim_3230919850_o-f96be898abd2ece38aeb5ed405e4ae32.jpg" data-size="803x1200" data-share-src="http://yachtsails-demo.dev/content/2-nyheder/20150425-test-nyhed/guggenheim_3230919850_o.jpg" title="guggenheim_3230919850_o" class="guggenheim__link"><img itemprop="thumbnail" alt="guggenheim_3230919850_o" src="img/guggenheim_3230919850_o-eb905d937b5db769bed7fbeb9d9523f5.jpg" width="124" height="185" srcset="img/guggenheim_3230919850_o-eb905d937b5db769bed7fbeb9d9523f5.jpg 124w,img/guggenheim_3230919850_o-b2b24554321218cde649c840b9d9a5f4.jpg 248w" sizes="(min-width:64.063em) 124px,(min-width:40.063em) calc(0.154225 * (100vw - 6em)),calc(100vw - 2.5em)" class="guggenheim__image"></a></div></figure><figure itemprop="associatedMedia" itemtype="http://schema.org/ImageObject" class="guggenheim__figure" style="width:34.3275%;padding:2px"><div class="guggenheim__ratio-container"><div style="padding-bottom:67.028985507246%"></div><a itemprop="contentUrl" href="img/guggenheim_3230922206_o-739f886fd8306561fc0b82434ad3560b.jpg" data-size="1148x768" data-share-src="http://yachtsails-demo.dev/content/2-nyheder/20150425-test-nyhed/guggenheim_3230922206_o.jpg" title="guggenheim_3230922206_o" class="guggenheim__link"><img itemprop="thumbnail" alt="guggenheim_3230922206_o" src="img/guggenheim_3230922206_o-c7a4825a802248989e0ab2f95bc3689a.jpg" width="276" height="185" srcset="img/guggenheim_3230922206_o-c7a4825a802248989e0ab2f95bc3689a.jpg 276w,img/guggenheim_3230922206_o-d9829127d9db1122085908cf5743ce66.jpg 552w" sizes="(min-width:64.063em) 276px,(min-width:40.063em) calc(0.343275 * (100vw - 6em)),calc(100vw - 2.5em)" class="guggenheim__image"></a></div></figure></div>
+<div class="guggenheim__row" style="padding-left:8px"><figure itemprop="associatedMedia" itemtype="http://schema.org/ImageObject" class="guggenheim__figure" style="width:49.75%;margin-left:-8px;padding:2px"><div class="guggenheim__ratio-container"><div style="padding-bottom:67%"></div><a itemprop="contentUrl" href="img/guggenheim_3230922606_o-e597a7f67a2f2dff6c0454cd25ce7c5e.jpg" data-size="1148x768" data-share-src="http://yachtsails-demo.dev/content/2-nyheder/20150425-test-nyhed/guggenheim_3230922606_o.jpg" title="guggenheim_3230922606_o" class="guggenheim__link"><img itemprop="thumbnail" alt="guggenheim_3230922606_o" src="img/guggenheim_3230922606_o-e1a669acecf92f74f31c48bd1de79394.jpg" width="400" height="268" srcset="img/guggenheim_3230922606_o-e1a669acecf92f74f31c48bd1de79394.jpg 400w,img/guggenheim_3230922606_o-58ea2ccdeb598848f297ad11924fbed3.jpg 800w" sizes="(min-width:64.063em) 400px,(min-width:40.063em) calc(0.4975 * (100vw - 6em)),calc(100vw - 2.5em)" class="guggenheim__image"></a></div></figure><figure itemprop="associatedMedia" itemtype="http://schema.org/ImageObject" class="guggenheim__figure" style="width:49.75%;padding:2px"><div class="guggenheim__ratio-container"><div style="padding-bottom:67%"></div><a itemprop="contentUrl" href="img/guggenheim_3230923044_o-4a26db86983edf8dd6759693e48f84db.jpg" data-size="1200x803" data-share-src="http://yachtsails-demo.dev/content/2-nyheder/20150425-test-nyhed/guggenheim_3230923044_o.jpg" title="guggenheim_3230923044_o" class="guggenheim__link"><img itemprop="thumbnail" alt="guggenheim_3230923044_o" src="img/guggenheim_3230923044_o-9fe60f52794220492e77d713ef2fbb06.jpg" width="400" height="268" srcset="img/guggenheim_3230923044_o-9fe60f52794220492e77d713ef2fbb06.jpg 400w,img/guggenheim_3230923044_o-1b8e5b7d6b053a82127488a40a8a944e.jpg 800w" sizes="(min-width:64.063em) 400px,(min-width:40.063em) calc(0.4975 * (100vw - 6em)),calc(100vw - 2.5em)" class="guggenheim__image"></a></div></figure></div>
+<div class="guggenheim__row" style="padding-left:12px"><figure itemprop="associatedMedia" itemtype="http://schema.org/ImageObject" class="guggenheim__figure" style="width:23.506875%;margin-left:-12px;padding:2px"><div class="guggenheim__ratio-container"><div style="padding-bottom:149.20634920635%"></div><a itemprop="contentUrl" href="img/guggenheim_3230923412_o-77742ee557aa47a63d12153c7eb170ae.jpg" data-size="803x1200" data-share-src="http://yachtsails-demo.dev/content/2-nyheder/20150425-test-nyhed/guggenheim_3230923412_o.jpg" title="guggenheim_3230923412_o" class="guggenheim__link"><img itemprop="thumbnail" alt="guggenheim_3230923412_o" src="img/guggenheim_3230923412_o-dfbee7ffa480a3efd438519654bf5da2.jpg" width="189" height="282" srcset="img/guggenheim_3230923412_o-dfbee7ffa480a3efd438519654bf5da2.jpg 189w,img/guggenheim_3230923412_o-c654bc6de4f6cf84a51d85b2d685587f.jpg 378w" sizes="(min-width:64.063em) 189px,(min-width:40.063em) calc(0.23506875 * (100vw - 6em)),calc(100vw - 2.5em)" class="guggenheim__image"></a></div></figure><figure itemprop="associatedMedia" itemtype="http://schema.org/ImageObject" class="guggenheim__figure" style="width:23.506875%;padding:2px"><div class="guggenheim__ratio-container"><div style="padding-bottom:149.20634920635%"></div><a itemprop="contentUrl" href="img/guggenheim_3230923998_o-90b1eb9d98a3dfa32e184c365a11fc45.jpg" data-size="514x768" data-share-src="http://yachtsails-demo.dev/content/2-nyheder/20150425-test-nyhed/guggenheim_3230923998_o.jpg" title="guggenheim_3230923998_o" class="guggenheim__link"><img itemprop="thumbnail" alt="guggenheim_3230923998_o" src="img/guggenheim_3230923998_o-170c70c06cc4838a6e046f74e1b21a2c.jpg" width="189" height="282" srcset="img/guggenheim_3230923998_o-170c70c06cc4838a6e046f74e1b21a2c.jpg 189w,img/guggenheim_3230923998_o-b3bf1e5bb1d20b68b56a9ebe91981a5c.jpg 378w" sizes="(min-width:64.063em) 189px,(min-width:40.063em) calc(0.23506875 * (100vw - 6em)),calc(100vw - 2.5em)" class="guggenheim__image"></a></div></figure><figure itemprop="associatedMedia" itemtype="http://schema.org/ImageObject" class="guggenheim__figure" style="width:52.48625%;padding:2px"><div class="guggenheim__ratio-container"><div style="padding-bottom:66.824644549763%"></div>        <a itemprop="contentUrl" href="img/guggenheim_3230924490_o-99a7a61920019bec4dc3471d335a3194.jpg" data-size="1148x768" data-share-src="http://yachtsails-demo.dev/content/2-nyheder/20150425-test-nyhed/guggenheim_3230924490_o.jpg" title="guggenheim_3230924490_o" class="guggenheim__link"><img itemprop="thumbnail" alt="guggenheim_3230924490_o" src="img/guggenheim_3230924490_o-f9b20f5153fbf73c6a8a4cfa3dafafe3.jpg" width="422" height="282" srcset="img/guggenheim_3230924490_o-f9b20f5153fbf73c6a8a4cfa3dafafe3.jpg 422w,img/guggenheim_3230924490_o-dd78273fdd5c654832af7bc29714021d.jpg 844w" sizes="(min-width:64.063em) 422px,(min-width:40.063em) calc(0.5248625 * (100vw - 6em)),calc(100vw - 2.5em)" class="guggenheim__image"></a></div></figure></div>
+</div>
+<br>
+
+<small>Photo Credits goes to <a href="https://www.flickr.com/photos/pahudson/albums/72157613376829359" target="_blank">Paul Hudson</a></small>
+
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+    It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides.
+        PhotoSwipe keeps only 3 of them in the DOM to save memory.
+        Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
