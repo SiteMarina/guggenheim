@@ -1,6 +1,7 @@
-# Guggenheim - An algorithm for a perfectly balanced Gallery for Kirby CMS
+# Guggenheim
+An algorithm for a perfectly balanced Gallery for Kirby CMS
 
-## Let's kick things off with a demo \o/
+## Let's kick things off with a demo 😍
 **See it live:**
 
 https://sitemarina.github.io/guggenheim/
@@ -10,7 +11,7 @@ https://sitemarina.github.io/guggenheim/
 [![Screenshot of Guggenheim](https://raw.githubusercontent.com/SiteMarina/guggenheim/master/guggenheim/screenshot.jpg)](https://sitemarina.github.io/guggenheim/)
 
 ## Idea
-Guggenheim is a plugin for [Kirby CMS](http://getkirby.com) which generates beautiful galleries through an algorithm for a perfectly balanced layout, which you might know from [medium.com's awesome image grids](https://medium.com/the-story/introducing-image-grids-c592e5bc16d8).
+Guggenheim is a plugin for [Kirby CMS](http://getkirby.com) which generates beautiful galleries through an algorithm for a perfectly balanced layout, which you might know from [the awesome image grids at medium.com](https://medium.com/the-story/introducing-image-grids-c592e5bc16d8)
 
 Read more into the math and science behind the algorithm here: [The algorithm for a perfectly balanced photo gallery](https://www.crispymtn.com/stories/the-algorithm-for-a-perfectly-balanced-photo-gallery)
 
@@ -18,13 +19,13 @@ In my search for the perfect gallery, which could do this linear partition again
 I really wasen't getting excited about all the countless client-side javascript solutions to the problem.
 As I care deeply about mobile, i simply didn't wanted to make the devices responsible for this task and wanted a PHP solution for the linear partition.
 
-## Moral License
-Feel free to test out the gallery - But if you like it, please please (please) consider buying one (or more, if you really like it) per domain Moral License / Donation here https://sitemarina.github.io/guggenheim/ - **I am currently struggling pretty bad 😥**
+## Single Domain License
+Buy a Single Domain License here https://sitemarina.github.io/guggenheim/ - **I am currently struggling pretty bad 😥**
 
-The code doesn't phone home, it doens't check for any license code, I'm never going to hack or DDoS your ass for anything.
-
-If you don't have any money, I'm not expecting anything from you (I'm currently there), and you can use it for free to get back on your feet.
-But I might have to take it down if this doesn't work out, on the other hand I will love to make it completely free as soon as possible.
+**Pre-launch Option**
+- I'll send you the plugin as a regular ol' .zip file to the email provided at purchase.
+- If you for some reason don't like it, send me an email me for an refund.
+- I'm working on an easier way to ship updates through Git - I'll send you an email when it's ready.
 
 ## Setup
 Grab yourself a copy of the most [awesome NoDB file-based CMS ever Kirby](http://getkirby.com)
