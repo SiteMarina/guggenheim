@@ -7,7 +7,12 @@
   <!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
 
 <style>
-
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
 html, body{
   background-color: #F8F3ED;
   font-family: sans-serif;
@@ -16,11 +21,15 @@ html, body{
   line-height: 1.5;
 }
 
-body{
-  max-width: 800px;
+body {
   margin: 0 auto;
   padding: .5em;
   padding-bottom: 4em;
+}
+
+.site-wrap {
+    /*max-width: 800px;*/
+    max-width: 70em;
 }
 
 h1 {
@@ -79,8 +88,57 @@ a, a:visited, a:active {
 }
 
 
+.inline-list {
+    margin: 0;
+    padding: 0;
+}
+.inline-list li {
+    list-style: none;
+    display: inline-block;
+}
+
+.buy-options {
+    width: 80%;
+    margin: auto;
+}
+.buy-options li {
+    padding: 0 1em;
+    width: 33%;
+}
+@media only screen and (max-width:40em) {
+    .buy-options {
+        width: 100%;
+    }
+    .buy-options li {
+        padding: 1em 0;
+        width: 100%;
+    }
+}
+@media only screen and (max-width:64em) {
+    .fully-responsive {
+        display: none;
+    }
+}
+
+.tweet-list li {
+    vertical-align: top;
+    width: 50%;
+}
+.twitter-tweet {
+    margin: .5em auto !important;
+}
+
+@media only screen and (max-width:64em) {
+    .tweet-list li {
+        width: 100%;
+    }
+}
 
 
+
+.margin-center {
+    margin: auto;
+}
 
 .guggenheim {
     max-width: 100%;
@@ -117,7 +175,7 @@ position: relative;
     width: 100%;
 }
 
-@media only screen and (max-width:40em){
+/*@media only screen and (max-width:40em){
     .guggenheim__figure {
         width: 100% !important;
         margin: 0 !important;
@@ -127,7 +185,7 @@ position: relative;
     .guggenheim__row {
         padding: 0 !important;
     }
-}
+}*/
 
 .zoom a, [data-lightbox], [data-lightbox] a {
     -webkit-tap-highlight-color: transparent;
@@ -317,6 +375,7 @@ position: relative;
 </head>
 <body>
     <script src="js/site.js" async defer></script>
+    <div class="site-wrap margin-center">
 
     <a class="logo" href="https://sitemarina.com">
         <div style="padding-bottom:23.5%"></div>
@@ -324,47 +383,137 @@ position: relative;
     </a>
 
     <h1>Guggenheim</h1>
-    <h2>An algorithm for a Perfectly Balanced Gallery for Kirby CMS.</h2>
+    <h2>An algorithm for Perfectly Balanced Galleries for Kirby CMS.</h2>
 
     <p>
-        How it works <a href="https://github.com/SiteMarina/guggenheim">https://github.com/SiteMarina/guggenheim</a> made by <a href="https://twitter.com/JimmyRittenborg">@JimmyRittenborg</a>
+        It's 100% server-side generated (no need for mobile-draining js) - <a href="https://github.com/SiteMarina/guggenheim">See the docs</a> - made by <a href="https://twitter.com/JimmyRittenborg">@JimmyRittenborg</a>
     </p>
 
-
-<h2>Pre-launch Option.</h2>
-<p>
-I'll send you the plugin as a regular ol' .zip file to the email provided at purchase.<br>
-If you for some reason don't like it, send me an email me for an refund.<br>
-I'm working on an easier way to ship updates through Git - I'll send you an email when it's ready.
-</p>
-
-    <h2>$39<br><small class="tiny">Single Domain License</small></h2>
-
     <br>
-    <form action="https://sitemarina.com/billing/guggenheim-charge.php" method="post">
-        <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-            data-key="pk_live_dprddk7mkcZbUAfis6K4iZEj"
-            data-image="https://s3.amazonaws.com/stripe-uploads/acct_14aZmsDqk4NUSXejmerchant-icon-1446976690484-sitemarina.jpg"
-            data-name="Guggenheim Gallery"
-            data-description="Single Domain License"
-            data-billing-address="false"
-            data-currency="USD"
-            data-amount="3900"
-            data-allow-remember-me="false"
-            async defer></script>
-    </form>
 
-    <br> <br> <br>
-
-<div itemtype="http://schema.org/ImageGallery" class="guggenheim gallery zoom margin-center" style="max-width:800px">
+<div itemtype="http://schema.org/ImageGallery" class="guggenheim gallery zoom margin-center" style="max-width:500px">
 <div class="guggenheim__row" style="padding-left:12px"><figure itemprop="associatedMedia" itemtype="http://schema.org/ImageObject" class="guggenheim__figure" style="width:52.48625%;margin-left:-12px;padding:2px"><div class="guggenheim__ratio-container"><div style="padding-bottom:66.824644549763%"></div><a itemprop="contentUrl" href="img/guggenheim_3230069707_o-c99b42b460c31ade3917c7d6bc6aef95.jpg" data-size="1148x768" data-share-src="http://yachtsails-demo.dev/content/2-nyheder/20150425-test-nyhed/guggenheim_3230069707_o.jpg" title="guggenheim_3230069707_o" class="guggenheim__link"><img itemprop="thumbnail" alt="guggenheim_3230069707_o" src="img/guggenheim_3230069707_o-9f12ef48dcfa6f38ce38ba3913889808.jpg" width="422" height="282" srcset="img/guggenheim_3230069707_o-9f12ef48dcfa6f38ce38ba3913889808.jpg 422w,img/guggenheim_3230069707_o-528e9a7b1e7db9e2d2d69aa1e9ab205a.jpg 844w" sizes="(min-width:64.063em) 422px,(min-width:40.063em) calc(0.5248625 * (100vw - 6em)),calc(100vw - 2.5em)" class="guggenheim__image"></a></div></figure><figure itemprop="associatedMedia" itemtype="http://schema.org/ImageObject" class="guggenheim__figure" style="width:23.506875%;padding:2px"><div class="guggenheim__ratio-container"><div style="padding-bottom:149.20634920635%"></div><a itemprop="contentUrl" href="img/guggenheim_3230070307_o-221fba205354b833377d0d6b5669ea06.jpg" data-size="514x768" data-share-src="http://yachtsails-demo.dev/content/2-nyheder/20150425-test-nyhed/guggenheim_3230070307_o.jpg" title="guggenheim_3230070307_o" class="guggenheim__link"><img itemprop="thumbnail" alt="guggenheim_3230070307_o" src="img/guggenheim_3230070307_o-6747c2ef026f943a9e46d7c339b89143.jpg" width="189" height="282" srcset="img/guggenheim_3230070307_o-6747c2ef026f943a9e46d7c339b89143.jpg 189w,img/guggenheim_3230070307_o-5d4b295958a38aa23431d7f4fda87029.jpg 378w" sizes="(min-width:64.063em) 189px,(min-width:40.063em) calc(0.23506875 * (100vw - 6em)),calc(100vw - 2.5em)" class="guggenheim__image"></a></div></figure><figure itemprop="associatedMedia" itemtype="http://schema.org/ImageObject" class="guggenheim__figure" style="width:23.506875%;padding:2px"><div class="guggenheim__ratio-container"><div style="padding-bottom:149.20634920635%"></div><a itemprop="contentUrl" href="img/guggenheim_3230070903_o-bbd1c359c6ee59c353d62919a4b842dd.jpg" data-size="514x768" data-share-src="http://yachtsails-demo.dev/content/2-nyheder/20150425-test-nyhed/guggenheim_3230070903_o.jpg" title="guggenheim_3230070903_o" class="guggenheim__link"><img itemprop="thumbnail" alt="guggenheim_3230070903_o" src="img/guggenheim_3230070903_o-1735694ceda90d2e826762b1d2361de5.jpg" width="189" height="282" srcset="img/guggenheim_3230070903_o-1735694ceda90d2e826762b1d2361de5.jpg 189w,img/guggenheim_3230070903_o-2d5292dc33a2558046f91a0f45bab993.jpg 378w" sizes="(min-width:64.063em) 189px,(min-width:40.063em) calc(0.23506875 * (100vw - 6em)),calc(100vw - 2.5em)" class="guggenheim__image"></a></div></figure></div>
 <div class="guggenheim__row" style="padding-left:16px"><figure itemprop="associatedMedia" itemtype="http://schema.org/ImageObject" class="guggenheim__figure" style="width:34.3275%;margin-left:-16px;padding:2px"><div class="guggenheim__ratio-container"><div style="padding-bottom:67.028985507246%"></div><a itemprop="contentUrl" href="img/guggenheim_3230074115_o-2ee76018a4b9963fd71c045e3e8e864f.jpg" data-size="1200x803" data-share-src="http://yachtsails-demo.dev/content/2-nyheder/20150425-test-nyhed/guggenheim_3230074115_o.jpg" title="guggenheim_3230074115_o" class="guggenheim__link"><img itemprop="thumbnail" alt="guggenheim_3230074115_o" src="img/guggenheim_3230074115_o-837abb484439003a4a5034bbc1a9b21e.jpg" width="276" height="185" srcset="img/guggenheim_3230074115_o-837abb484439003a4a5034bbc1a9b21e.jpg 276w,img/guggenheim_3230074115_o-d8af9f93c2ba9f37b7e96a5aae19a121.jpg 552w" sizes="(min-width:64.063em) 276px,(min-width:40.063em) calc(0.343275 * (100vw - 6em)),calc(100vw - 2.5em)" class="guggenheim__image"></a></div></figure><figure itemprop="associatedMedia" itemtype="http://schema.org/ImageObject" class="guggenheim__figure" style="width:15.4225%;padding:2px"><div class="guggenheim__ratio-container"><div style="padding-bottom:149.1935483871%"></div><a itemprop="contentUrl" href="img/guggenheim_3230919722_o-3ebe9361d69c8ed1451df164b3af9ad5.jpg" data-size="514x768" data-share-src="http://yachtsails-demo.dev/content/2-nyheder/20150425-test-nyhed/guggenheim_3230919722_o.jpg" title="guggenheim_3230919722_o" class="guggenheim__link"><img itemprop="thumbnail" alt="guggenheim_3230919722_o" src="img/guggenheim_3230919722_o-e6bec06ccbc3a4961449d828c65066b0.jpg" width="124" height="185" srcset="img/guggenheim_3230919722_o-e6bec06ccbc3a4961449d828c65066b0.jpg 124w,img/guggenheim_3230919722_o-fc7a3879fa66220c7ce51207bd00ebbf.jpg 248w" sizes="(min-width:64.063em) 124px,(min-width:40.063em) calc(0.154225 * (100vw - 6em)),calc(100vw - 2.5em)" class="guggenheim__image"></a></div></figure><figure itemprop="associatedMedia" itemtype="http://schema.org/ImageObject" class="guggenheim__figure" style="width:15.4225%;padding:2px"><div class="guggenheim__ratio-container"><div style="padding-bottom:149.1935483871%"></div><a itemprop="contentUrl" href="img/guggenheim_3230919850_o-f96be898abd2ece38aeb5ed405e4ae32.jpg" data-size="803x1200" data-share-src="http://yachtsails-demo.dev/content/2-nyheder/20150425-test-nyhed/guggenheim_3230919850_o.jpg" title="guggenheim_3230919850_o" class="guggenheim__link"><img itemprop="thumbnail" alt="guggenheim_3230919850_o" src="img/guggenheim_3230919850_o-eb905d937b5db769bed7fbeb9d9523f5.jpg" width="124" height="185" srcset="img/guggenheim_3230919850_o-eb905d937b5db769bed7fbeb9d9523f5.jpg 124w,img/guggenheim_3230919850_o-b2b24554321218cde649c840b9d9a5f4.jpg 248w" sizes="(min-width:64.063em) 124px,(min-width:40.063em) calc(0.154225 * (100vw - 6em)),calc(100vw - 2.5em)" class="guggenheim__image"></a></div></figure><figure itemprop="associatedMedia" itemtype="http://schema.org/ImageObject" class="guggenheim__figure" style="width:34.3275%;padding:2px"><div class="guggenheim__ratio-container"><div style="padding-bottom:67.028985507246%"></div><a itemprop="contentUrl" href="img/guggenheim_3230922206_o-739f886fd8306561fc0b82434ad3560b.jpg" data-size="1148x768" data-share-src="http://yachtsails-demo.dev/content/2-nyheder/20150425-test-nyhed/guggenheim_3230922206_o.jpg" title="guggenheim_3230922206_o" class="guggenheim__link"><img itemprop="thumbnail" alt="guggenheim_3230922206_o" src="img/guggenheim_3230922206_o-c7a4825a802248989e0ab2f95bc3689a.jpg" width="276" height="185" srcset="img/guggenheim_3230922206_o-c7a4825a802248989e0ab2f95bc3689a.jpg 276w,img/guggenheim_3230922206_o-d9829127d9db1122085908cf5743ce66.jpg 552w" sizes="(min-width:64.063em) 276px,(min-width:40.063em) calc(0.343275 * (100vw - 6em)),calc(100vw - 2.5em)" class="guggenheim__image"></a></div></figure></div>
 <div class="guggenheim__row" style="padding-left:8px"><figure itemprop="associatedMedia" itemtype="http://schema.org/ImageObject" class="guggenheim__figure" style="width:49.75%;margin-left:-8px;padding:2px"><div class="guggenheim__ratio-container"><div style="padding-bottom:67%"></div><a itemprop="contentUrl" href="img/guggenheim_3230922606_o-e597a7f67a2f2dff6c0454cd25ce7c5e.jpg" data-size="1148x768" data-share-src="http://yachtsails-demo.dev/content/2-nyheder/20150425-test-nyhed/guggenheim_3230922606_o.jpg" title="guggenheim_3230922606_o" class="guggenheim__link"><img itemprop="thumbnail" alt="guggenheim_3230922606_o" src="img/guggenheim_3230922606_o-e1a669acecf92f74f31c48bd1de79394.jpg" width="400" height="268" srcset="img/guggenheim_3230922606_o-e1a669acecf92f74f31c48bd1de79394.jpg 400w,img/guggenheim_3230922606_o-58ea2ccdeb598848f297ad11924fbed3.jpg 800w" sizes="(min-width:64.063em) 400px,(min-width:40.063em) calc(0.4975 * (100vw - 6em)),calc(100vw - 2.5em)" class="guggenheim__image"></a></div></figure><figure itemprop="associatedMedia" itemtype="http://schema.org/ImageObject" class="guggenheim__figure" style="width:49.75%;padding:2px"><div class="guggenheim__ratio-container"><div style="padding-bottom:67%"></div><a itemprop="contentUrl" href="img/guggenheim_3230923044_o-4a26db86983edf8dd6759693e48f84db.jpg" data-size="1200x803" data-share-src="http://yachtsails-demo.dev/content/2-nyheder/20150425-test-nyhed/guggenheim_3230923044_o.jpg" title="guggenheim_3230923044_o" class="guggenheim__link"><img itemprop="thumbnail" alt="guggenheim_3230923044_o" src="img/guggenheim_3230923044_o-9fe60f52794220492e77d713ef2fbb06.jpg" width="400" height="268" srcset="img/guggenheim_3230923044_o-9fe60f52794220492e77d713ef2fbb06.jpg 400w,img/guggenheim_3230923044_o-1b8e5b7d6b053a82127488a40a8a944e.jpg 800w" sizes="(min-width:64.063em) 400px,(min-width:40.063em) calc(0.4975 * (100vw - 6em)),calc(100vw - 2.5em)" class="guggenheim__image"></a></div></figure></div>
 <div class="guggenheim__row" style="padding-left:12px"><figure itemprop="associatedMedia" itemtype="http://schema.org/ImageObject" class="guggenheim__figure" style="width:23.506875%;margin-left:-12px;padding:2px"><div class="guggenheim__ratio-container"><div style="padding-bottom:149.20634920635%"></div><a itemprop="contentUrl" href="img/guggenheim_3230923412_o-77742ee557aa47a63d12153c7eb170ae.jpg" data-size="803x1200" data-share-src="http://yachtsails-demo.dev/content/2-nyheder/20150425-test-nyhed/guggenheim_3230923412_o.jpg" title="guggenheim_3230923412_o" class="guggenheim__link"><img itemprop="thumbnail" alt="guggenheim_3230923412_o" src="img/guggenheim_3230923412_o-dfbee7ffa480a3efd438519654bf5da2.jpg" width="189" height="282" srcset="img/guggenheim_3230923412_o-dfbee7ffa480a3efd438519654bf5da2.jpg 189w,img/guggenheim_3230923412_o-c654bc6de4f6cf84a51d85b2d685587f.jpg 378w" sizes="(min-width:64.063em) 189px,(min-width:40.063em) calc(0.23506875 * (100vw - 6em)),calc(100vw - 2.5em)" class="guggenheim__image"></a></div></figure><figure itemprop="associatedMedia" itemtype="http://schema.org/ImageObject" class="guggenheim__figure" style="width:23.506875%;padding:2px"><div class="guggenheim__ratio-container"><div style="padding-bottom:149.20634920635%"></div><a itemprop="contentUrl" href="img/guggenheim_3230923998_o-90b1eb9d98a3dfa32e184c365a11fc45.jpg" data-size="514x768" data-share-src="http://yachtsails-demo.dev/content/2-nyheder/20150425-test-nyhed/guggenheim_3230923998_o.jpg" title="guggenheim_3230923998_o" class="guggenheim__link"><img itemprop="thumbnail" alt="guggenheim_3230923998_o" src="img/guggenheim_3230923998_o-170c70c06cc4838a6e046f74e1b21a2c.jpg" width="189" height="282" srcset="img/guggenheim_3230923998_o-170c70c06cc4838a6e046f74e1b21a2c.jpg 189w,img/guggenheim_3230923998_o-b3bf1e5bb1d20b68b56a9ebe91981a5c.jpg 378w" sizes="(min-width:64.063em) 189px,(min-width:40.063em) calc(0.23506875 * (100vw - 6em)),calc(100vw - 2.5em)" class="guggenheim__image"></a></div></figure><figure itemprop="associatedMedia" itemtype="http://schema.org/ImageObject" class="guggenheim__figure" style="width:52.48625%;padding:2px"><div class="guggenheim__ratio-container"><div style="padding-bottom:66.824644549763%"></div>        <a itemprop="contentUrl" href="img/guggenheim_3230924490_o-99a7a61920019bec4dc3471d335a3194.jpg" data-size="1148x768" data-share-src="http://yachtsails-demo.dev/content/2-nyheder/20150425-test-nyhed/guggenheim_3230924490_o.jpg" title="guggenheim_3230924490_o" class="guggenheim__link"><img itemprop="thumbnail" alt="guggenheim_3230924490_o" src="img/guggenheim_3230924490_o-f9b20f5153fbf73c6a8a4cfa3dafafe3.jpg" width="422" height="282" srcset="img/guggenheim_3230924490_o-f9b20f5153fbf73c6a8a4cfa3dafafe3.jpg 422w,img/guggenheim_3230924490_o-dd78273fdd5c654832af7bc29714021d.jpg 844w" sizes="(min-width:64.063em) 422px,(min-width:40.063em) calc(0.5248625 * (100vw - 6em)),calc(100vw - 2.5em)" class="guggenheim__image"></a></div></figure></div>
 </div>
 <br>
-
 <small>Photo Credits goes to <a href="https://www.flickr.com/photos/pahudson/albums/72157613376829359" target="_blank">Paul Hudson</a></small>
+<br><br>
+
+
+
+
+
+<h2>Pre-launch Option.</h2>
+<p>
+I'll send you the plugin as a regular ol' .zip file to the email provided at purchase.<br>
+If you for some reason don't like it, send me an email for a refund.<br>
+I'm working on an easier way to ship updates through Git - I'll send you an email when it's ready.
+</p>
+<br>
+    <!-- <h2>For a limited time only, I'm following the <a href="https://forum.getkirby.com/t/kirby-2-2-3-and-25-discount-on-pro-licenses/" target="_blank">Kirby Pro Discount of 25%</a></h2> -->
+    <ul class="inline-list buy-options"><li>
+        <h2>$39<br><small class="tiny"><strong>1&times; Single Domain License</strong></small></h2>
+        <!-- <h2><del>$39</del> $29.25<br><small class="tiny"><strong>1&times; Single Domain License</strong></small></h2> -->
+        <p>For just that single domain or try-out<br>If you don't like it, I refund you</p>
+        <form action="https://sitemarina.com/billing/guggenheim-charge.php" method="post">
+            <input type="hidden" name="offer" value="1">
+            <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                data-key="pk_live_dprddk7mkcZbUAfis6K4iZEj"
+                data-image="https://s3.amazonaws.com/stripe-uploads/acct_14aZmsDqk4NUSXejmerchant-icon-1446976690484-sitemarina.jpg"
+                data-name="Guggenheim Gallery"
+                data-description="1&times; Single Domain License"
+                data-billing-address="false"
+                data-currency="USD"
+
+                data-amount="3900"
+                data-label="Pay $39 with Card"
+
+                data-amount="2925"
+                data-label="Pay $29.25 with Card"
+
+                data-allow-remember-me="false"
+                async defer></script>
+        </form>
+    </li><li>
+        <h2>$159<br><small class="tiny"><strong>5&times; Single Domain Licenses</strong></small></h2>
+        <!-- <h2><del>$159</del> $119.25<br><small class="tiny"><strong>5&times; Single Domain Licenses</strong></small></h2> -->
+        <p>For just a handfull of clients?<br>I'll give you ~ one for free</p>
+        <form action="https://sitemarina.com/billing/guggenheim-charge.php" method="post">
+            <input type="hidden" name="offer" value="2">
+            <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                data-key="pk_live_dprddk7mkcZbUAfis6K4iZEj"
+                data-image="https://s3.amazonaws.com/stripe-uploads/acct_14aZmsDqk4NUSXejmerchant-icon-1446976690484-sitemarina.jpg"
+                data-name="Guggenheim Gallery"
+                data-description="5&times; Single Domain Licenses"
+                data-billing-address="false"
+                data-currency="USD"
+
+                data-amount="15900"
+                data-label="Pay $159 with Card"
+
+                data-amount="11925"
+                data-label="Pay $119.25 with Card"
+
+                data-allow-remember-me="false"
+                async defer></script>
+        </form>
+    </li><li>
+        <h2>$790<br><small class="tiny"><strong><span style="font-size:1.5em;vertical-align:-.1em;">&infin;</span> Unlimited Licenses</strong></small></h2>
+        <!-- <h2><del>$790</del> 592.50<br><small class="tiny"><strong><span style="font-size:1.5em;vertical-align:-.1em;">&infin;</span> Unlimited Licenses</strong></small></h2> -->
+        <p>Don't wanna count licenses?<br>You're good to infinity and beyond</p>
+        <form action="https://sitemarina.com/billing/guggenheim-charge.php" method="post">
+            <input type="hidden" name="offer" value="3">
+            <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                data-key="pk_live_dprddk7mkcZbUAfis6K4iZEj"
+                data-image="https://s3.amazonaws.com/stripe-uploads/acct_14aZmsDqk4NUSXejmerchant-icon-1446976690484-sitemarina.jpg"
+                data-name="Guggenheim Gallery"
+                data-description="&infin; Unlimited Licenses"
+                data-billing-address="false"
+                data-currency="USD"
+
+                data-amount="79000"
+                data-label="Pay $790 with Card"
+
+                data-amount="59250"
+                data-label="Pay $592.50 with Card"
+
+                data-allow-remember-me="false"
+                async defer></script>
+        </form>
+    </li></ul>
+
+<br><br><br>
+<h2>But why just take my word for it..</h2>
+<br>
+
+<ul class="inline-list tweet-list"><li>
+    <blockquote class="twitter-tweet" data-conversation="none" lang="da"><p lang="en" dir="ltr"><a href="https://twitter.com/JimmyRittenborg">@JimmyRittenborg</a> looks awesome, Jimmy! Will definitely use this for a current client project!</p>&mdash; Kirby (@getkirby) <a href="https://twitter.com/getkirby/status/670927359525167105">29. november 2015</a></blockquote>
+</li><li>
+    <blockquote class="twitter-tweet" data-cards="hidden" lang="da"><p lang="en" dir="ltr"><a href="https://twitter.com/zeldman">@zeldman</a> beautiful medium like linear partitioned gallery <a href="https://t.co/EOp9WZC2OH">https://t.co/EOp9WZC2OH</a> 👌🏻 <a href="https://t.co/L2Js7Ne9zX">pic.twitter.com/L2Js7Ne9zX</a></p>&mdash; Jimmy Rittenborg (@JimmyRittenborg) <a href="https://twitter.com/JimmyRittenborg/status/670877170613534720">29. november 2015</a></blockquote>
+    <small>It even got some love from <a href="https://twitter.com/zeldman">Jeffrey Zeldman</a> \o/</small>
+</li></ul>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<br><br>
+
+</div>
+
+<div class="fully-responsive">
+<h2>Oh ..did I mention, as it's fully responsive -it can also do this..</h2><br><br>
+
+
+<div itemtype="http://schema.org/ImageGallery" class="guggenheim gallery zoom margin-center">
+<div class="guggenheim__row" style="padding-left:12px"><figure itemprop="associatedMedia" itemtype="http://schema.org/ImageObject" class="guggenheim__figure" style="width:52.48625%;margin-left:-12px;padding:2px"><div class="guggenheim__ratio-container"><div style="padding-bottom:66.824644549763%"></div><a itemprop="contentUrl" href="img/guggenheim_3230069707_o-c99b42b460c31ade3917c7d6bc6aef95.jpg" data-size="1148x768" data-share-src="http://yachtsails-demo.dev/content/2-nyheder/20150425-test-nyhed/guggenheim_3230069707_o.jpg" title="guggenheim_3230069707_o" class="guggenheim__link"><img itemprop="thumbnail" alt="guggenheim_3230069707_o" src="img/guggenheim_3230069707_o-9f12ef48dcfa6f38ce38ba3913889808.jpg" width="422" height="282" srcset="img/guggenheim_3230069707_o-9f12ef48dcfa6f38ce38ba3913889808.jpg 422w,img/guggenheim_3230069707_o-528e9a7b1e7db9e2d2d69aa1e9ab205a.jpg 844w" sizes="(min-width:64.063em) 422px,(min-width:40.063em) calc(0.5248625 * (100vw - 6em)),calc(100vw - 2.5em)" class="guggenheim__image"></a></div></figure><figure itemprop="associatedMedia" itemtype="http://schema.org/ImageObject" class="guggenheim__figure" style="width:23.506875%;padding:2px"><div class="guggenheim__ratio-container"><div style="padding-bottom:149.20634920635%"></div><a itemprop="contentUrl" href="img/guggenheim_3230070307_o-221fba205354b833377d0d6b5669ea06.jpg" data-size="514x768" data-share-src="http://yachtsails-demo.dev/content/2-nyheder/20150425-test-nyhed/guggenheim_3230070307_o.jpg" title="guggenheim_3230070307_o" class="guggenheim__link"><img itemprop="thumbnail" alt="guggenheim_3230070307_o" src="img/guggenheim_3230070307_o-6747c2ef026f943a9e46d7c339b89143.jpg" width="189" height="282" srcset="img/guggenheim_3230070307_o-6747c2ef026f943a9e46d7c339b89143.jpg 189w,img/guggenheim_3230070307_o-5d4b295958a38aa23431d7f4fda87029.jpg 378w" sizes="(min-width:64.063em) 189px,(min-width:40.063em) calc(0.23506875 * (100vw - 6em)),calc(100vw - 2.5em)" class="guggenheim__image"></a></div></figure><figure itemprop="associatedMedia" itemtype="http://schema.org/ImageObject" class="guggenheim__figure" style="width:23.506875%;padding:2px"><div class="guggenheim__ratio-container"><div style="padding-bottom:149.20634920635%"></div><a itemprop="contentUrl" href="img/guggenheim_3230070903_o-bbd1c359c6ee59c353d62919a4b842dd.jpg" data-size="514x768" data-share-src="http://yachtsails-demo.dev/content/2-nyheder/20150425-test-nyhed/guggenheim_3230070903_o.jpg" title="guggenheim_3230070903_o" class="guggenheim__link"><img itemprop="thumbnail" alt="guggenheim_3230070903_o" src="img/guggenheim_3230070903_o-1735694ceda90d2e826762b1d2361de5.jpg" width="189" height="282" srcset="img/guggenheim_3230070903_o-1735694ceda90d2e826762b1d2361de5.jpg 189w,img/guggenheim_3230070903_o-2d5292dc33a2558046f91a0f45bab993.jpg 378w" sizes="(min-width:64.063em) 189px,(min-width:40.063em) calc(0.23506875 * (100vw - 6em)),calc(100vw - 2.5em)" class="guggenheim__image"></a></div></figure></div>
+<div class="guggenheim__row" style="padding-left:16px"><figure itemprop="associatedMedia" itemtype="http://schema.org/ImageObject" class="guggenheim__figure" style="width:34.3275%;margin-left:-16px;padding:2px"><div class="guggenheim__ratio-container"><div style="padding-bottom:67.028985507246%"></div><a itemprop="contentUrl" href="img/guggenheim_3230074115_o-2ee76018a4b9963fd71c045e3e8e864f.jpg" data-size="1200x803" data-share-src="http://yachtsails-demo.dev/content/2-nyheder/20150425-test-nyhed/guggenheim_3230074115_o.jpg" title="guggenheim_3230074115_o" class="guggenheim__link"><img itemprop="thumbnail" alt="guggenheim_3230074115_o" src="img/guggenheim_3230074115_o-837abb484439003a4a5034bbc1a9b21e.jpg" width="276" height="185" srcset="img/guggenheim_3230074115_o-837abb484439003a4a5034bbc1a9b21e.jpg 276w,img/guggenheim_3230074115_o-d8af9f93c2ba9f37b7e96a5aae19a121.jpg 552w" sizes="(min-width:64.063em) 276px,(min-width:40.063em) calc(0.343275 * (100vw - 6em)),calc(100vw - 2.5em)" class="guggenheim__image"></a></div></figure><figure itemprop="associatedMedia" itemtype="http://schema.org/ImageObject" class="guggenheim__figure" style="width:15.4225%;padding:2px"><div class="guggenheim__ratio-container"><div style="padding-bottom:149.1935483871%"></div><a itemprop="contentUrl" href="img/guggenheim_3230919722_o-3ebe9361d69c8ed1451df164b3af9ad5.jpg" data-size="514x768" data-share-src="http://yachtsails-demo.dev/content/2-nyheder/20150425-test-nyhed/guggenheim_3230919722_o.jpg" title="guggenheim_3230919722_o" class="guggenheim__link"><img itemprop="thumbnail" alt="guggenheim_3230919722_o" src="img/guggenheim_3230919722_o-e6bec06ccbc3a4961449d828c65066b0.jpg" width="124" height="185" srcset="img/guggenheim_3230919722_o-e6bec06ccbc3a4961449d828c65066b0.jpg 124w,img/guggenheim_3230919722_o-fc7a3879fa66220c7ce51207bd00ebbf.jpg 248w" sizes="(min-width:64.063em) 124px,(min-width:40.063em) calc(0.154225 * (100vw - 6em)),calc(100vw - 2.5em)" class="guggenheim__image"></a></div></figure><figure itemprop="associatedMedia" itemtype="http://schema.org/ImageObject" class="guggenheim__figure" style="width:15.4225%;padding:2px"><div class="guggenheim__ratio-container"><div style="padding-bottom:149.1935483871%"></div><a itemprop="contentUrl" href="img/guggenheim_3230919850_o-f96be898abd2ece38aeb5ed405e4ae32.jpg" data-size="803x1200" data-share-src="http://yachtsails-demo.dev/content/2-nyheder/20150425-test-nyhed/guggenheim_3230919850_o.jpg" title="guggenheim_3230919850_o" class="guggenheim__link"><img itemprop="thumbnail" alt="guggenheim_3230919850_o" src="img/guggenheim_3230919850_o-eb905d937b5db769bed7fbeb9d9523f5.jpg" width="124" height="185" srcset="img/guggenheim_3230919850_o-eb905d937b5db769bed7fbeb9d9523f5.jpg 124w,img/guggenheim_3230919850_o-b2b24554321218cde649c840b9d9a5f4.jpg 248w" sizes="(min-width:64.063em) 124px,(min-width:40.063em) calc(0.154225 * (100vw - 6em)),calc(100vw - 2.5em)" class="guggenheim__image"></a></div></figure><figure itemprop="associatedMedia" itemtype="http://schema.org/ImageObject" class="guggenheim__figure" style="width:34.3275%;padding:2px"><div class="guggenheim__ratio-container"><div style="padding-bottom:67.028985507246%"></div><a itemprop="contentUrl" href="img/guggenheim_3230922206_o-739f886fd8306561fc0b82434ad3560b.jpg" data-size="1148x768" data-share-src="http://yachtsails-demo.dev/content/2-nyheder/20150425-test-nyhed/guggenheim_3230922206_o.jpg" title="guggenheim_3230922206_o" class="guggenheim__link"><img itemprop="thumbnail" alt="guggenheim_3230922206_o" src="img/guggenheim_3230922206_o-c7a4825a802248989e0ab2f95bc3689a.jpg" width="276" height="185" srcset="img/guggenheim_3230922206_o-c7a4825a802248989e0ab2f95bc3689a.jpg 276w,img/guggenheim_3230922206_o-d9829127d9db1122085908cf5743ce66.jpg 552w" sizes="(min-width:64.063em) 276px,(min-width:40.063em) calc(0.343275 * (100vw - 6em)),calc(100vw - 2.5em)" class="guggenheim__image"></a></div></figure></div>
+<div class="guggenheim__row" style="padding-left:8px"><figure itemprop="associatedMedia" itemtype="http://schema.org/ImageObject" class="guggenheim__figure" style="width:49.75%;margin-left:-8px;padding:2px"><div class="guggenheim__ratio-container"><div style="padding-bottom:67%"></div><a itemprop="contentUrl" href="img/guggenheim_3230922606_o-e597a7f67a2f2dff6c0454cd25ce7c5e.jpg" data-size="1148x768" data-share-src="http://yachtsails-demo.dev/content/2-nyheder/20150425-test-nyhed/guggenheim_3230922606_o.jpg" title="guggenheim_3230922606_o" class="guggenheim__link"><img itemprop="thumbnail" alt="guggenheim_3230922606_o" src="img/guggenheim_3230922606_o-e1a669acecf92f74f31c48bd1de79394.jpg" width="400" height="268" srcset="img/guggenheim_3230922606_o-e1a669acecf92f74f31c48bd1de79394.jpg 400w,img/guggenheim_3230922606_o-58ea2ccdeb598848f297ad11924fbed3.jpg 800w" sizes="(min-width:64.063em) 400px,(min-width:40.063em) calc(0.4975 * (100vw - 6em)),calc(100vw - 2.5em)" class="guggenheim__image"></a></div></figure><figure itemprop="associatedMedia" itemtype="http://schema.org/ImageObject" class="guggenheim__figure" style="width:49.75%;padding:2px"><div class="guggenheim__ratio-container"><div style="padding-bottom:67%"></div><a itemprop="contentUrl" href="img/guggenheim_3230923044_o-4a26db86983edf8dd6759693e48f84db.jpg" data-size="1200x803" data-share-src="http://yachtsails-demo.dev/content/2-nyheder/20150425-test-nyhed/guggenheim_3230923044_o.jpg" title="guggenheim_3230923044_o" class="guggenheim__link"><img itemprop="thumbnail" alt="guggenheim_3230923044_o" src="img/guggenheim_3230923044_o-9fe60f52794220492e77d713ef2fbb06.jpg" width="400" height="268" srcset="img/guggenheim_3230923044_o-9fe60f52794220492e77d713ef2fbb06.jpg 400w,img/guggenheim_3230923044_o-1b8e5b7d6b053a82127488a40a8a944e.jpg 800w" sizes="(min-width:64.063em) 400px,(min-width:40.063em) calc(0.4975 * (100vw - 6em)),calc(100vw - 2.5em)" class="guggenheim__image"></a></div></figure></div>
+<div class="guggenheim__row" style="padding-left:12px"><figure itemprop="associatedMedia" itemtype="http://schema.org/ImageObject" class="guggenheim__figure" style="width:23.506875%;margin-left:-12px;padding:2px"><div class="guggenheim__ratio-container"><div style="padding-bottom:149.20634920635%"></div><a itemprop="contentUrl" href="img/guggenheim_3230923412_o-77742ee557aa47a63d12153c7eb170ae.jpg" data-size="803x1200" data-share-src="http://yachtsails-demo.dev/content/2-nyheder/20150425-test-nyhed/guggenheim_3230923412_o.jpg" title="guggenheim_3230923412_o" class="guggenheim__link"><img itemprop="thumbnail" alt="guggenheim_3230923412_o" src="img/guggenheim_3230923412_o-dfbee7ffa480a3efd438519654bf5da2.jpg" width="189" height="282" srcset="img/guggenheim_3230923412_o-dfbee7ffa480a3efd438519654bf5da2.jpg 189w,img/guggenheim_3230923412_o-c654bc6de4f6cf84a51d85b2d685587f.jpg 378w" sizes="(min-width:64.063em) 189px,(min-width:40.063em) calc(0.23506875 * (100vw - 6em)),calc(100vw - 2.5em)" class="guggenheim__image"></a></div></figure><figure itemprop="associatedMedia" itemtype="http://schema.org/ImageObject" class="guggenheim__figure" style="width:23.506875%;padding:2px"><div class="guggenheim__ratio-container"><div style="padding-bottom:149.20634920635%"></div><a itemprop="contentUrl" href="img/guggenheim_3230923998_o-90b1eb9d98a3dfa32e184c365a11fc45.jpg" data-size="514x768" data-share-src="http://yachtsails-demo.dev/content/2-nyheder/20150425-test-nyhed/guggenheim_3230923998_o.jpg" title="guggenheim_3230923998_o" class="guggenheim__link"><img itemprop="thumbnail" alt="guggenheim_3230923998_o" src="img/guggenheim_3230923998_o-170c70c06cc4838a6e046f74e1b21a2c.jpg" width="189" height="282" srcset="img/guggenheim_3230923998_o-170c70c06cc4838a6e046f74e1b21a2c.jpg 189w,img/guggenheim_3230923998_o-b3bf1e5bb1d20b68b56a9ebe91981a5c.jpg 378w" sizes="(min-width:64.063em) 189px,(min-width:40.063em) calc(0.23506875 * (100vw - 6em)),calc(100vw - 2.5em)" class="guggenheim__image"></a></div></figure><figure itemprop="associatedMedia" itemtype="http://schema.org/ImageObject" class="guggenheim__figure" style="width:52.48625%;padding:2px"><div class="guggenheim__ratio-container"><div style="padding-bottom:66.824644549763%"></div>        <a itemprop="contentUrl" href="img/guggenheim_3230924490_o-99a7a61920019bec4dc3471d335a3194.jpg" data-size="1148x768" data-share-src="http://yachtsails-demo.dev/content/2-nyheder/20150425-test-nyhed/guggenheim_3230924490_o.jpg" title="guggenheim_3230924490_o" class="guggenheim__link"><img itemprop="thumbnail" alt="guggenheim_3230924490_o" src="img/guggenheim_3230924490_o-f9b20f5153fbf73c6a8a4cfa3dafafe3.jpg" width="422" height="282" srcset="img/guggenheim_3230924490_o-f9b20f5153fbf73c6a8a4cfa3dafafe3.jpg 422w,img/guggenheim_3230924490_o-dd78273fdd5c654832af7bc29714021d.jpg 844w" sizes="(min-width:64.063em) 422px,(min-width:40.063em) calc(0.5248625 * (100vw - 6em)),calc(100vw - 2.5em)" class="guggenheim__image"></a></div></figure></div>
+</div>
+<br>
+</div>
+
+
 
 
 
