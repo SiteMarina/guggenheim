@@ -28,7 +28,7 @@ Buy a Single Domain License here https://sitemarina.github.io/guggenheim/ - **I 
 - I'm working on an easier way to ship updates through Git - I'll send you an email when it's ready.
 
 ## Setup
-Grab yourself a copy of [Kirby - a awesome NoDB file-based CMS](http://getkirby.com)
+Grab yourself a copy of [Kirby - an awesome performant CMS](http://getkirby.com)
 
 - Copy the guggenheim folder into site/plugins
 
@@ -39,12 +39,12 @@ If you’re using the [Kirby Cachebuster Plugin](https://github.com/getkirby/plu
 **The easy ‘out of the box’ way:**
 If you’re in a hurry, prototyping or just quickly want to test out Guggenheim with PhotoSwipe, the easiest way is to just put this in your head
 ```php
-<?= css('plugins/guggenheim/assets/css/guggenheim-❤-photoswipe.min.css') ?>
+<?= css('assets/plugins/guggenheim/css/guggenheim-photoswipe.min.css') ?>
 ```
 and this in your footer
 ```php
 <?= photoswipe() ?>
-<?= js('plugins/guggenheim/assets/js/guggenheim-❤-photoswipe.min.js', true) ?>
+<?= js('assets/plugins/guggenheim/js/guggenheim-photoswipe.min.js', true) ?>
 ```
 off you go, you’re now all setup to use Guggenheim with PhotoSwipe.
 
@@ -65,7 +65,7 @@ To preserve your total hackable and artistic freedom, the preferred and best way
 
 Guggenheim
 - `guggenheim.css`
-- `guggenheim-❤-photoswipe.min.js` (you can leave PhotoSwipe and this binding out entirely, if you just want to use Guggenheim on its own)
+- `guggenheim-photoswipe.min.js` (you can leave PhotoSwipe and this binding out entirely, if you just want to use Guggenheim on its own)
 
 ## Settings
 in your site/config/config.php
